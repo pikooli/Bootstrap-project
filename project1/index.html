@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bootstrap</title>
+
+            <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <!-- JS, Popper.js, and jQuery -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+        <style>
+            /* Set the size of the div element that contains the map */
+           #map {
+             height: 400px;  /* The height is 400 pixels */
+             width: 100%;  /* The width is the width of the web page */
+            }
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+            <div class="container">
+                
+                <a href="#" class="navbar-brand">Bootstrap</a>
+                
+                <!-- this is the button of the navbar -->
+                <button class="navbar-toggler" type="button" data-toggle="collape" 
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- this is the navigation menue   -->
+    
+                <div class="collapse navbar-collapse nav" id="navbarResponsive">
+                    <ul class="navbar-na ml-auto nav">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+        </nav>
+
+        <!-- this class make the image round a little bit-->
+        <!-- the img-fluid will resize the image -->
+        <img class="rounded img-fluid" src="kitty.jpeg" alt=""/>            
+        <img class="rounded-circle img-fluid" src="kitty.jpeg" alt=""/>            
+
+        <!-- this will make it look like a thumbnail -->
+        <img class="img-thumbnail img-fluid" src="kitty.jpeg" alt=""/>            
+
+        <!-- button bootstrap -->
+        <button type="button" class="btn-success">Press Me</button>
+        <button type="button" class="btn-info">Press Me</button>
+        <button type="button" class="btn-danger">Press Me</button>
+
+        <h3>My Google Maps Demo</h3>
+        <!--The div element for the map -->
+        <div id="map"></div>
+
+        <!-- footer -->
+        <footer class="py-5 bg-dark fixed-bottom">
+            <div class="container">
+                <p class="m-0 text-center text-white">Footer Copy Here</p>
+            </div>
+        </footer>
+        
+        <script>
+            // Initialize and add the map
+            function initMap() {
+              // The location of Uluru
+              var uluru = {lat: -25.344, lng: 131.036};
+              // The map, centered at Uluru
+              var map = new google.maps.Map(
+                  document.getElementById('map'), {zoom: 4, center: uluru});
+              // The marker, positioned at Uluru
+              var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+        <!--Load the API from the specified URL
+        * The async attribute allows the browser to render the page while the API loads
+        * The key parameter will contain your own API key (which is not needed for this tutorial)
+        * The callback parameter executes the initMap() function
+        -->
+        <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDYiwbnUv5o60jH62XN2tHnZKA5mRnQhE&callback=initMap">
+        </script>
+    </body>
+</html>
