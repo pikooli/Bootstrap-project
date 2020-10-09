@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+
+    <script>
+    
+        $("document").ready(function(){
+
+            // every paragraphe that are in a div 
+            // $("div > p").css("border", "2px solid blue");
+            
+            // every paragraphe that are in a div and have class "fourth-para"
+            // $("div > p.fourth-para").css("border", "2px solid blue");
+
+            // select the ul in the element with id "box" 
+            $("#box + ul").css("border", "2px solid blue");
+
+           
+        })
+        
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    
+        <p>
+            blablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+            blablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+        </p>
+
+        <p>
+            blablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+            blablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+        </p>
+        <div>
+            <p>
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+            </p>
+
+            <p>
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+            </p>
+
+            <p>
+                blablablablablablablablablablablablablablablablablablablablablablablablabla
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla            
+            </p>
+
+            <p class="fourth-para">
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+            </p>
+        </div>
+
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+        </ul>
+
+        <div id="box">
+            <p>
+                blablablablablablablablablablablablablablablablablablablablablablablablabla
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla            
+            </p>
+            <p>
+                blablablablablablablablablablablablablablablablablablablablablablablablabla
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla            
+            </p>
+            <p class="last">
+                blablablablablablablablablablablablablablablablablablablablablablablablabla
+                blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla            
+            </p>
+
+        </div>
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+        </ul>
+
+
+</body>
+</html>

@@ -13,45 +13,30 @@
     <script>
     
         $("document").ready(function(){
-            
-            $("#add-class").click(function(){
-                $("p:first").addClass("colorBox")
+
+            $("#append").click(function(){
+                $("p:first").append("I just appened some compy !");
             })
 
-            $("#remove-class").click(function(){
-                $("p:first").removeClass("colorBox")
+            $("#prepend").click(function(){
+                $("p:first").prepend("I just prepend some compy !");
             })
-
-            $("#toggle-class").click(function(){
-                $("p:first").toggleClass("colorBox")
-            })
-
-            $("#increase-class").click(function(){
-                $("p:first").css("font-size", "+=1px")
-            })
-
-
+           
         })
         
     </script>
     <style>
-            .colorBox {
-
-                color: #00D8FF
-            }
-
-
+        
     </style>
 </head>
 <body>
 
-    <a id="add-class" href="#">Add Class</a>
+    <a id="append" href="#">Append</a>
+
+    <a id="prepend" href="#">Prepend</a>
     
-    <a id="remove-class" href="#">Remove Class</a>
-    
-    <a id="toggle-class" href="#">Toggle Class</a>
-    
-    <a id="increase-class" href="#">Increase Class</a>
+
+
 
     <div id="container">
 

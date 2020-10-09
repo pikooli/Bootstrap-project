@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,45 +14,34 @@
     <script>
     
         $("document").ready(function(){
+
+            $("#create_text").click(function(){
+                
+                $("#container p:last").text("Replaced and created this text");
+            })
+
             
-            $("#add-class").click(function(){
-                $("p:first").addClass("colorBox")
-            })
-
-            $("#remove-class").click(function(){
-                $("p:first").removeClass("colorBox")
-            })
-
-            $("#toggle-class").click(function(){
-                $("p:first").toggleClass("colorBox")
-            })
-
-            $("#increase-class").click(function(){
-                $("p:first").css("font-size", "+=1px")
-            })
-
-
+            $("#create_variable").click(function(){
+                
+                var newText = $("#container p:first").html();
+                $("#container p:last").html(newText);
+            
+        })
+           
         })
         
     </script>
     <style>
-            .colorBox {
-
-                color: #00D8FF
-            }
-
-
+        
     </style>
 </head>
 <body>
 
-    <a id="add-class" href="#">Add Class</a>
+    <a id="create" href="#">Create</a>
+
+    <a id="create_text" href="#">Create Text</a>
     
-    <a id="remove-class" href="#">Remove Class</a>
-    
-    <a id="toggle-class" href="#">Toggle Class</a>
-    
-    <a id="increase-class" href="#">Increase Class</a>
+    <a id="create_variable" href="#">Create Text</a>
 
     <div id="container">
 

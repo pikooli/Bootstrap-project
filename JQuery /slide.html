@@ -17,11 +17,19 @@
     
         $("document").ready(function(){
 
-            $("#toggleMe").click(function(){
-                    $("#textbox").toggle(4000, "swing")
+            $("#slide-up").click(function(){
+                    $("#textbox").slideUp("2000", "linear");
             })
 
+            $("#slide-down").click(function(){
+                    $("#textbox").slideDown("2000", "linear");
+            })
 
+            $("#toggleSlide").click(function(){
+                $("#textbox").slideToggle("2000", function(){
+                    alert("Done")
+                });
+            })
 
             
         })
@@ -31,7 +39,7 @@
 </head>
 <body>
 
-    <a href="#" id="toggleMe">Toggle me</a> 
+    <a href="#" id="slide-up">slide-up</a> | <a href="#" id="slide-down">slide-down</a>    | <a href="#" id="toggleSlide">toggleSlide</a>    
     <div id="textbox">
         <p class="textCopy">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
         <p>blablabla</p>
