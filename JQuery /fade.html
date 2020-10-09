@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <style>
+
+        #textbox {
+            display: none;
+        }
+
+    </style>
+
+
+    <script>
+    
+        $("document").ready(function(){
+
+            $("#fade-in").on("click", function(){
+                    $("#textbox").fadeIn(3000, function(){
+                        alert("I'm Done");
+                    });
+            })
+
+            $("#fade-out").on("click", function(){
+                    $("#textbox").fadeOut(3000, function(){
+                        alert("I'm Done");
+                    });
+            })
+
+            
+        })
+        
+    </script>
+
+</head>
+<body>
+
+    <a href="#" id="fade-in">fade-in</a> | <a href="#" id="fade-out">fade-out</a>    
+    <div id="textbox">
+        <p class="textCopy">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+        <p>blablabla</p>
+        
+    </div>
+
+
+</body>
+</html>

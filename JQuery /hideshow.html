@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <style>
+        #textbox {
+            display: none;
+        }
+    </style>
+
+
+    <script>
+    
+        $("document").ready(function(){
+
+            $("#show").on("click", function(){
+                $("#textbox").show();
+            })
+
+
+            $("#hide").on("click", function(){
+                $("#textbox").hide();
+            })
+
+            
+        })
+        
+    </script>
+
+</head>
+<body>
+
+    <a href="#" id="show">Click to show</a>   |
+    <a href="#" id="hide">Click to hide</a>
+    <div id="textbox">
+        blablabla
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+
+        $("document").ready(function(){
+            
+            // adding css to all h1 tags
+
+            $("h1").css("border", "3px solid green");
+            
+            // just the first one 
+            
+            $("h1:first").css("border", "3px solid red");
+
+            // select the third child
+            
+            $("h1:nth-child(3)").css("border", "3px solid red");
+
+            // last one 
+            
+            $("h1:last").css("border", "3px solid pink");
+            
+
+        })
+        
+    </script>
+
+</head>
+<body>
+    
+    <h1>I Love JQuery 1</h1>
+    <h1>I Love JQuery 2</h1>
+    <h1>I Love JQuery 3</h1>
+    <h1>I Love JQuery 3</h1>
+    <h1>I Love JQuery 3</h1>
+
+
+
+
+
+
+</body>
+</html>

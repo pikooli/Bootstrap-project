@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <style>
+
+
+    </style>
+
+
+    <script>
+    
+        $("document").ready(function(){
+
+            $("#slide-up").click(function(){
+                    $("#textbox").slideUp("2000", "linear");
+            })
+
+            $("#slide-down").click(function(){
+                    $("#textbox").slideDown("2000", "linear");
+            })
+
+            $("#toggleSlide").click(function(){
+                $("#textbox").slideToggle("2000", function(){
+                    alert("Done")
+                });
+            })
+
+            
+        })
+        
+    </script>
+
+</head>
+<body>
+
+    <a href="#" id="slide-up">slide-up</a> | <a href="#" id="slide-down">slide-down</a>    | <a href="#" id="toggleSlide">toggleSlide</a>    
+    <div id="textbox">
+        <p class="textCopy">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+        <p>blablabla</p>
+        
+    </div>
+
+
+</body>
+</html>
